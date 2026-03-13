@@ -24,7 +24,7 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="main-content bento-grid-container">
         
         <section class="hero-wrapper">
             <div class="hero-content">
@@ -43,7 +43,7 @@
             
             <article class="bento-card bento-main-display">
                 <div class="video-background">
-                    <video autoplay muted loop playsinline poster="./assets/img/image_error_savings.png">
+                    <video autoplay muted loop playsinline oncanplay="this.muted=true" poster="./assets/img/image_error_savings.png">
                         <source src="./assets/video/count_savings.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -85,17 +85,25 @@
             </article>
 
             <article class="bento-card bento-goal-preview">
+                <div class="video-background">
+                    <video autoplay muted loop playsinline poster="./assets/img/dark_tech_error_backround.png">
+                        <source src="./assets/video/dark_tech_background.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay" style="background: rgba(0, 0, 0, 0.6);"></div>
+                </div>
+
                 <div class="card-inner about-kays-trigger">
                     <div class="trigger-content">
                         <span class="card-tag">Trust</span>
-                        <h3 class="feature-title">Privacity.</h3>
+                        <h3 class="feature-title">Privacy.</h3>
                         <p class="feature-desc">
                             Your data is your asset. Learn how KAYS protects your digital footprint with bank-grade standards.
                         </p>
                     </div>
                     
                     <div class="trigger-action">
-                        <a href="about.html" class="btn-explore">
+                        <a href="legal.html" class="btn-explore">
                             <span>Legal Center</span>
                             <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/>
@@ -106,7 +114,15 @@
             </article>
 
             <article class="bento-card bento-feature">
-                <div class="card-inner">
+                <div class="video-background">
+                    <video autoplay muted loop playsinline oncanplay="this.muted=true" poster="./assets/img/watch_backgroung_error.png">
+                        <source src="./assets/video/watch.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay" style="background: rgba(0, 0, 0, 0.5);"></div>
+                </div>
+
+                <div class="card-inner motivation-content">
                     <header class="card-header-simple">
                         <span class="card-tag">Reality Check</span>
                         <h3 class="feature-title">Luck is not <br><span class="text-gradient">a strategy.</span></h3>
@@ -132,6 +148,6 @@
             <p class="legal-text">© 2026 KAYS.</p>
         </div>
     </footer>
-
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
