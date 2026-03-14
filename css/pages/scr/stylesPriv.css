@@ -1,0 +1,63 @@
+:root {
+    /* Nueva Paleta: Profundidad sin saturación */
+    --bg-private: #0a0a0b;        /* Un negro "carbono" que descansa la vista */
+    --surface-main: #111113;     /* Color de las tarjetas (elevación) */
+    --surface-accent: #18181b;   /* Hover o elementos secundarios */
+    
+    /* Bordes: El detalle que da el "Wow" */
+    --border-subtle: rgba(255, 255, 255, 0.05);
+    --border-focus: rgba(59, 130, 246, 0.5);
+    
+    /* Acentos: Sólidos y profesionales */
+    --accent-blue: #3b82f6;
+    --accent-success: #10b981;
+    --accent-danger: #ef4444;
+    
+    /* Tipografía: Jerarquía clara */
+    --text-high-vibe: #f4f4f5;   /* Blanco roto para no cansar */
+    --text-muted: #71717a;       /* Gris para info secundaria */
+    
+    /* Efectos */
+    --radius-ui: 12px;           /* Bordes menos redondeados = más serio/pro */
+    --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.3);
+    --transition-pro: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset enfocado a UI */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--bg-private);
+    color: var(--text-high-vibe);
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Estilo de la Barra de Scroll (Premium) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-private);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--surface-accent);
+    border-radius: 10px;
+}
+
+.interface-layout {
+    display: grid;
+    grid-template-columns: 80px 1fr; /* Sidebar estrecho tipo 'dock' */
+    min-height: 100vh;
+    background-color: var(--bg-black);
+}

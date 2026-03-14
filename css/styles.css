@@ -5,7 +5,7 @@
     --card-border: rgba(255, 255, 255, 0.08);
     --accent-blue: #3b82f6;
     --accent-gradient: linear-gradient(135deg, #deebfb 0%, #5017fb 100%);
-    
+    --accent-blue-gradient: linear-gradient(145deg, #3f86fa 30%, #0043ae 100%);
     /* Typography */
     --text-primary: #ffffff;
     --text-secondary: #94a3b8;
@@ -30,4 +30,18 @@ body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.5;
     overflow-x: hidden;
+}
+a {
+    text-decoration: none; 
+    color: inherit;        
+    cursor: pointer;
+}
+/* Background Animation Placeholder */
+.wallpaper-canvas {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+        radial-gradient(at 100% 100%, hsla(225,39%,15%,1) 0, transparent 50%);
 }

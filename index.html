@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kays</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/components/footer.css">
+    <link rel="stylesheet" href="./css/components/public/nav.css">
+    <link rel="stylesheet" href="./css/components/cardTag.css">
     <link rel="stylesheet" href="./css/pages/index.css">
 </head>
 <body>
@@ -18,8 +21,8 @@
             </div>
             
             <div class="auth-controls">
-                <button class="btn-secondary">Log In</button>
-                <button class="btn-primary btn-animation">Create Account</button>
+                <button class="btn-secondary"><a href="./pages/public/login.html">Log In</a></button>
+                <button class="btn-primary btn-animation"><a href="./pages/public/createAccount.html">Create Account</a></button>
             </div>
         </nav>
     </header>
@@ -29,12 +32,12 @@
         <section class="hero-wrapper">
             <div class="hero-content">
                 <span class="hero-label">Stop bleeding cash on $7 lattes.</span>
-                <h1 class="hero-headline">Put your gallet <br><span class="hero-gradient">under managament.</span></h1>
+                <h1 class="hero-headline">Put your wallet <br><span class="hero-gradient">under managament.</span></h1>
                 <p class="hero-subtext">
                     Define your goal. Track every cent. Reach it faster.
                 </p>
                 <div class="hero-actions">
-                    <button class="btn-cta-large btn-animation">Get Started Now</button>
+                    <button class="btn-cta-large btn-animation"><a href="./pages/public/createAccount.html">Get Started Now</a></button>
                 </div>
             </div>
         </section>
@@ -64,6 +67,14 @@
             </article>
 
             <article class="bento-card bento-goal-preview">
+                <div class="video-background">
+                    <video autoplay muted loop playsinline>
+                        <source src="./assets/video/team_vision.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay" style="background: rgba(0, 0, 0, 0.6);"></div>
+                </div>
+
                 <div class="card-inner about-kays-trigger">
                     <div class="trigger-content">
                         <span class="card-tag">Our Identity</span>
@@ -74,7 +85,7 @@
                     </div>
                     
                     <div class="trigger-action">
-                        <a href="about.html" class="btn-explore">
+                        <a href="./pages/public/about.html" class="btn-explore">
                             <span>View Manifesto</span>
                             <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -143,11 +154,37 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-bottom">
-            <p class="legal-text">© 2026 KAYS.</p>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-text">KAYS</span>
+                    <p>Engineered for clarity.</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="nav-col">
+                        <h4>Internal</h4>
+                        <a href="index.html">Product</a>
+                        <a href="./pages/public/about.html">About</a>
+                    </div>
+                    <div class="nav-col">
+                        <h4>Compliance</h4>
+                        <a href="legal.html">Privacy</a>
+                        <a href="legal.html">Terms</a>
+                    </div>
+                </nav>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 KAYS Project.</p>
+                <div class="social-links">
+                    <a href="#">X / Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
         </div>
     </footer>
+    
     <script type="module" src="./js/main.js"></script>
 </body>
 </html>

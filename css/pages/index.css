@@ -1,5 +1,5 @@
-/* 2. Layout Containers */
-.nav-container, .main-content, .footer-bottom {
+/* Layout Containers */
+.main-content{
     max-width: var(--container-max);
     margin: 0 auto; 
     padding: 0 2rem;
@@ -8,68 +8,8 @@
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
-/* 3. Navigation */
-.site-header {
-    width: 100%;
-    padding: 1.5rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(12px);
-}
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand-logo {
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-}
-
-.auth-controls {
-    display: flex;
-    gap: 1rem;
-}
-
-/* 4. Buttons (Modular Design) */
-button {
-    font-family: inherit;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-    border: none;
-}
-
-.btn-primary {
-    background: var(--text-primary);
-}
-.btn-animation{
-    color: var(--bg-black);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-}
-
-.btn-primary:hover, .btn-cta-large:hover{
-    background: #e2e8f0;
-    transform: translateY(-3px);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--text-primary);
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-}
-
-.btn-secondary:hover {
-    color: var(--accent-blue);
-}
-
-/* 5. Hero Section */
+/* Hero Section */
 .hero-wrapper {
     padding: 8rem 0 4rem;
     text-align: center;
@@ -103,7 +43,7 @@ button {
     font-size: 1.125rem;
 }
 
-/* 6. Bento Grid Layout */
+/* Bento Grid Layout */
 .bento-layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -178,22 +118,6 @@ button {
     padding: 2.5rem;
     box-sizing: border-box;
 }
-
-
-.card-tag {
-    display: inline-block;
-    background: var(--accent-blue);
-    backdrop-filter: blur(4px);
-    padding: 0.4rem 0.8rem;
-    border-radius: 50px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 
 .card-title {
     font-size: 2.5rem;
@@ -353,12 +277,3 @@ button {
     .auth-controls { display: none; } 
 }
 
-/* Background Animation Placeholder */
-.wallpaper-canvas {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1;
-    background: 
-        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-        radial-gradient(at 100% 100%, hsla(225,39%,15%,1) 0, transparent 50%);
-}
