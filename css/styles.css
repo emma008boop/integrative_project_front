@@ -5,7 +5,7 @@
     --card-border: rgba(255, 255, 255, 0.08);
     --accent-blue: #3b82f6;
     --accent-gradient: linear-gradient(135deg, #deebfb 0%, #5017fb 100%);
-    
+    --accent-blue-gradient: linear-gradient(145deg, #3f86fa 30%, #0043ae 100%);
     /* Typography */
     --text-primary: #ffffff;
     --text-secondary: #94a3b8;

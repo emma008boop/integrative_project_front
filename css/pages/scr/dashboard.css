@@ -1,0 +1,98 @@
+.streak-container {
+    margin-bottom: 2rem;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.streak-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--surface-main);
+    border: 1px solid var(--border-subtle);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    transition: var(--transition-pro);
+}
+
+.streak-badge svg {
+    width: 20px;
+    height: 20px;
+}
+
+.streak-badge span#streak-days {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--text-high-vibe);
+}
+
+.streak-badge .streak-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+/* Chart Card */
+.header-actions{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.chart-section {
+    margin-bottom: 2rem;
+    margin-left: 10px;
+}
+
+.chart-card {
+    background: var(--surface-main);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-ui);
+    padding: 2rem;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.chart-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.chart-subtitle {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Contenedor para el gráfico de Python */
+.chart-viewport {
+    width: 100%;
+    height: 350px; /* Altura ideal para dashboard */
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dot-active {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px){
+    .main-footer{
+        visibility: hidden;
+    }
+}

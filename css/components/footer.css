@@ -1,11 +1,12 @@
-/* Footer */
 .main-footer {
     background: rgba(0, 0, 0, 0.4);
     border-top: 1px solid var(--card-border);
     padding: 8rem 0 3rem;
     scroll-snap-align: end;
 }
-
+.footer-top{
+    margin-left: 10px;
+}
 .footer-brand .logo-text {
     font-size: 1.5rem;
     font-weight: 800;
@@ -52,3 +53,6 @@
     color: var(--text-secondary);
     font-size: 0.85rem;
 }   
+.copyright{
+    margin-left: 10px;
+}
