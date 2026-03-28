@@ -1,10 +1,12 @@
 /* Layout Containers */
-.main-content{
+.main-content {
     max-width: var(--container-max);
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 0 2rem;
 }
-.bento-grid-container { 
+
+/* Scroll snap va en html/body, no en el contenedor interno */
+html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
@@ -13,6 +15,9 @@
 .hero-wrapper {
     padding: 8rem 0 4rem;
     text-align: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh; /* Necesario para que el snap tenga sentido */
 }
 
 .hero-label {
@@ -47,22 +52,33 @@
 .bento-layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 260px;
-    gap: 1.5rem;
-    margin-bottom: 5rem;
-}
+    grid-auto-rows: 100vh; 
+    gap: 0; 
+    margin-bottom: 0;
 
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bento-goal-preview .video-overlay {
+    opacity: 1;
+    background: black;
+    transition: opacity 0.6s ease;
+}
 .bento-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: var(--border-radius-lg);
     padding: 2.5rem;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+    /* Snap en cada card individualmente */
     scroll-snap-align: start;
-    scroll-snap-stop: always;   
+    scroll-snap-stop: always;
 }
+
 .bento-card.is-visible {
     opacity: 1;
     transform: translateY(0);
@@ -73,52 +89,58 @@
     background: rgba(255, 255, 255, 0.05);
 }
 
-
 /* Grid Positioning */
 .bento-main-display {
     grid-column: span 12;
-    grid-row: span 2;
-    position: relative; 
-    overflow: hidden;   
-    padding: 0;         
+    grid-row: span 1;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
     min-height: 300px;
 }
 
 .video-background {
-    position: absolute;  
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;          
+    z-index: 0;
 }
+
 .video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover;   
+    object-fit: cover;
 }
+
 .video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
-/* Video card content*/
+/* Video card content */
 .card-content {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 2.5rem;
     box-sizing: border-box;
 }
-
+.card-tag{
+    margin-top: 60px;
+}
+.feature-title{
+    color: var(--placeholder);
+}
 .card-title {
     font-size: 2.5rem;
     font-weight: 800;
@@ -127,25 +149,29 @@
     color: #ffffff;
 }
 
-
-.data-label-video {
+.card-text {
     font-size: 1rem;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 400px; 
+    max-width: 400px;
     line-height: 1.4;
-    border-left: 2px solid var(--accent-blue);
     padding-left: 1rem;
-    filter: drop-shadow(0px 0px 10px black);
+    border-left: 2px solid var(--accent-blue);
 }
-/*END VIDEO CARD CONTENT*/
 
-.bento-goal-preview { 
+.card-text-position{
+    margin-top: 50px;
+
+}
+
+/* Goal Preview Cards */
+.bento-goal-preview {
     grid-column: span 6;
-    grid-row: span 2;
+    grid-row: span 1;
     position: relative;
     overflow: hidden;
 }
+
 .about-kays-trigger {
     position: relative;
     z-index: 2;
@@ -155,19 +181,12 @@
     justify-content: space-between;
     padding: 2.5rem;
 }
-.about-kays-trigger .feature-desc {
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 85%;
-    filter: drop-shadow(0px 0px 10px black);
-}
-
-
 .btn-explore {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
     padding: 0.8rem 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--buttons-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     color: white;
@@ -185,27 +204,21 @@
 }
 
 .bento-goal-preview:hover .btn-explore {
-    background: white;
-    color: black;
+    color: --buttons-color-transition;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
 .bento-goal-preview:hover .arrow-icon {
     transform: translateX(5px);
 }
 
-.bento-goal-preview:hover .text-gradient {
-    filter: brightness(1.2);
-}
-
-/*Next card*/
-.bento-feature { 
+/* Feature Card */
+.bento-feature {
     grid-column: span 12;
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 .motivation-content {
@@ -216,6 +229,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .motivation-footer {
     display: flex;
     justify-content: space-between;
@@ -231,14 +245,14 @@
 .stat-label {
     font-size: 0.65rem;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    color: var(--placeholder);
     letter-spacing: 1px;
 }
 
 .stat-value {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #4ade80; 
+    color: #4ade80;
 }
 
 .icon-box-modern {
@@ -252,7 +266,6 @@
     color: var(--accent-blue);
 }
 
-
 .icon-box-modern svg {
     width: 20px;
     height: 20px;
@@ -265,15 +278,20 @@
     transition: all 0.3s ease;
 }
 
-/* 8. Responsive Adjustments */
+/* Responsive */
 @media (max-width: 992px) {
-    .bento-main-display, .bento-feature, .bento-goal-preview {
+    .bento-main-display,
+    .bento-feature,
+    .bento-goal-preview {
         grid-column: span 12;
     }
 }
 
 @media (max-width: 640px) {
-    .hero-wrapper { padding: 4rem 0 2rem; }
-    .auth-controls { display: none; } 
+    .hero-wrapper {
+        padding: 4rem 0 2rem;
+    }
+    .auth-controls {
+        display: none;
+    }
 }
-

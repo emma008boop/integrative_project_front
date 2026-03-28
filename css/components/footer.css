@@ -1,5 +1,5 @@
 .main-footer {
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--background);
     border-top: 1px solid var(--card-border);
     padding: 8rem 0 3rem;
     scroll-snap-align: end;

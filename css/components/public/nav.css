@@ -31,34 +31,3 @@
 }
 
 
-/* Buttons (Modular Design) */
-button {
-    font-family: inherit;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-    border: none;
-}
-
-.btn-primary {
-    background: var(--text-primary);
-}
-.btn-animation{
-    color: var(--bg-black);
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-}
-.btn-animation:hover{
-    background: #e2e8f0;
-    transform: translateY(-3px);
-}
-.btn-secondary {
-    background: transparent;
-    color: var(--text-primary);
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-}
-
-.btn-secondary:hover {
-    color: var(--accent-blue);
-}

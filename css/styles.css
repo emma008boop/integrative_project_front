@@ -1,14 +1,24 @@
 :root {
+    /* delete */
+    --card-bg: #FFFFFF;
+    
     /* Color Palette */
-    --bg-black: #050505;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --accent-blue: #3b82f6;
-    --accent-gradient: linear-gradient(135deg, #deebfb 0%, #5017fb 100%);
+    --bg-black: white;
     --accent-blue-gradient: linear-gradient(145deg, #3f86fa 30%, #0043ae 100%);
+    --background: linear-gradient(160deg, #FAFAF8 0%, #F0EDE6 50%, #EAE8F0 100%);
+    
     /* Typography */
-    --text-primary: #ffffff;
-    --text-secondary: #94a3b8;
+    --accent-gradient: linear-gradient(135deg, #2C2A28 50%, #777470 60%);
+    --text-primary:#0F0E0C;
+    --text-secondary: #2C2A28;
+    --placeholder: #B5B0AA;
+
+    --card-tag: #D97706;
+    --card-tag-text: black;
+
+    /* buttons */
+    --buttons-color: #042d86;
+    --buttons-color-transition: #113eb8;
     
     /* Spacing & Effects */
     --container-max: 1200px;
@@ -41,7 +51,5 @@ a {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: -1;
-    background: 
-        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-        radial-gradient(at 100% 100%, hsla(225,39%,15%,1) 0, transparent 50%);
+    background: var(--background);
 }
