@@ -21,16 +21,10 @@
 
 ---
 
-## Por qué estos colores
+## Why These Colors
 
-El fondo usa un gradiente que mezcla crema cálido con lavanda suave. Esto aleja la interfaz del blanco clínico sin perder limpieza, y genera una atmósfera de calma que reduce la ansiedad que normalmente genera ver tus finanzas.
+The background uses a gradient that blends warm cream with soft lavender. This moves the interface away from a clinical white without sacrificing clarity, and creates a calm atmosphere that reduces the anxiety typically associated with viewing your finances.
 
-El azul eléctrico es el único color de acción en toda la UI. El cerebro aprende rápido que cuando ve ese azul, hay algo que puede hacer. Usarlo solo en botones y CTAs lo vuelve un lenguaje visual, no decoración.
+Electric blue is the only action color in the entire UI. The brain quickly learns that when it sees that blue, there’s something to do. Using it only on buttons and CTAs makes it a visual language, not decoration.
 
-Los grises del texto tienen un toque cálido, no son grises puros. Esto hace que convivan naturalmente con el fondo crema sin generar el contraste frío que se siente en interfaces muy técnicas.
-
-El verde de la racha activa es el color más importante emocionalmente. Solo aparece cuando el usuario no ha gastado. El cerebro asocia verde con victoria, y al ser el único verde en toda la interfaz, su aparición se siente como una recompensa real.
-
-El rojo de alerta es contenido y apagado. No es un rojo agresivo, es una señal. La diferencia importa porque KAYS no quiere castigar al usuario, quiere informarlo.
-
-El ámbar del milestone y los card tags es escaso por diseño. Al no usarse en ningún otro lugar, cuando aparece el cerebro lo interpreta automáticamente como algo especial, un logro, un hito, un momento que vale la pena notar.
+The grays in the text have a t...
